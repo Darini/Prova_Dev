@@ -1,0 +1,16 @@
+unit DepartamentoDAO;
+
+interface
+
+uses
+
+
+type
+
+  TDepartamentoDAO = class(TConexao)
+
+  end;
+
+implementation
+
+end.

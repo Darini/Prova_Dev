@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/07/17 01:12:24.725,=C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/17 01:12:35.754,C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Prova_Dev\Menu_Form.pas=C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/17 01:12:35.754,C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Prova_Dev\Menu_Form.dfm=C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/07/17 01:12:50.737,C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Prova_Dev\ProvaDev.dproj=C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/07/17 01:20:10.854,=C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Prova_Dev\Unit1.pas</Transaction>
+    <Transaction>2022/07/17 01:20:25.375,C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Prova_Dev\Model\Empregado.pas=C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Prova_Dev\Unit1.pas</Transaction>
+    <Transaction>2022/07/17 01:20:32.318,=C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Prova_Dev\Unit1.pas</Transaction>
+    <Transaction>2022/07/17 01:20:38.959,C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Prova_Dev\Model\Departamento.pas=C:\Users\Precisao\Documents\Embarcadero\Studio\Projects\Prova_Dev\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

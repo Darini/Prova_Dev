@@ -1,0 +1,14 @@
+unit Departamento;
+
+interface
+
+type
+
+  TDepartamento = class
+
+
+  end;
+
+implementation
+
+end.

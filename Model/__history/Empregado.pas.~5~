@@ -1,0 +1,18 @@
+unit Empregado;
+
+interface
+
+type
+
+  TEmpregado = class
+
+  private
+
+  public
+
+
+  end;
+
+implementation
+
+end.

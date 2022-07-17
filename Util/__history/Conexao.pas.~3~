@@ -1,0 +1,11 @@
+unit Conexao;
+
+interface          ;
+
+type
+
+  TConexao = class
+
+implementation
+
+end.
