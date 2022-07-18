@@ -29,14 +29,5 @@ object Menu: TMenu
         OnClick = miEmpregado_CadastroClick
       end
     end
-    object miRelatorios: TMenuItem
-      Caption = 'Relat'#243'rios'
-      object Empregados2: TMenuItem
-        Caption = 'miEmpregado_Rel'
-      end
-      object Departamentos1: TMenuItem
-        Caption = 'miDepartamento_Rel'
-      end
-    end
   end
 end

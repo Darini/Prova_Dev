@@ -11,7 +11,6 @@ type
   TMenu = class(TForm)
 
     mmMenuPrincipal: TMainMenu;
-    miRelatorios: TMenuItem;
     miCadastro: TMenuItem;
     miDepartamento_Cadastro: TMenuItem;
     miEmpregado_Cadastro: TMenuItem;
