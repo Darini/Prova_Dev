@@ -9,7 +9,7 @@ uses
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Datasnap.Provider,
   Datasnap.DBClient, Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
-  Vcl.Grids, Vcl.DBGrids, Empregado, UEmpregado_ConsultaDAO;
+  Vcl.Grids, Vcl.DBGrids, Empregado, UEmpregado_ConsultaDAO, frxClass, frxDBSet;
 
 type
   TEmpregado_Consulta = class(TForm)
@@ -31,11 +31,16 @@ type
     CDSnm_departamento: TWideStringField;
     CDSnm_empregado: TWideStringField;
     CDSnm_funcao: TWideStringField;
+    frxDBEmpregados: TfrxDBDataset;
+    frxRelEmpregados: TfrxReport;
+    pnImprimir: TPanel;
+    imgImprimir: TImage;
     procedure dbgEmpregadosDblClick(Sender: TObject);
     procedure pnlSelecionarDblClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure pnlSelecionarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure pnImprimirClick(Sender: TObject);
   private
     { Private declarations }
     objEmpregado : TEmpregado;
@@ -90,6 +95,14 @@ begin
    Result := objEmpregado;
 end;
 
+
+procedure TEmpregado_Consulta.pnImprimirClick(Sender: TObject);
+begin
+  CDS.First;
+  CDS.Open;
+
+  frxRelEmpregados.ShowReport();
+end;
 
 procedure TEmpregado_Consulta.pnlSelecionarClick(Sender: TObject);
 begin

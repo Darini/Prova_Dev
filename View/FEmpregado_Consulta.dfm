@@ -11,6 +11,7 @@ object Empregado_Consulta: TEmpregado_Consulta
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   PixelsPerInch = 96
@@ -213,6 +214,7 @@ object Empregado_Consulta: TEmpregado_Consulta
           39A819AEC75523B42A3E26E9FB9009CE06A240622288B84410618920C2124184
           2582084B04119608222C7F00EBE0CD83AA1C38CC0000000049454E44AE426082}
         Stretch = True
+        OnClick = pnImprimirClick
       end
     end
     object pnlSelecionar: TPanel
@@ -257,6 +259,55 @@ object Empregado_Consulta: TEmpregado_Consulta
           751CF42B28620D8A588322D6189648BC30B0293DA9C25EBD30502B14B1861B91
           2706783642556A49A90000000049454E44AE426082}
         Stretch = True
+        OnClick = pnlSelecionarClick
+      end
+    end
+    object pnImprimir: TPanel
+      Left = 219
+      Top = 16
+      Width = 75
+      Height = 61
+      Anchors = []
+      BevelOuter = bvNone
+      Caption = 'Imprimir'
+      Color = clMenuHighlight
+      DragCursor = crHandPoint
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+      VerticalAlignment = taAlignBottom
+      OnClick = pnImprimirClick
+      object imgImprimir: TImage
+        AlignWithMargins = True
+        Left = 18
+        Top = 0
+        Width = 40
+        Height = 40
+        Center = True
+        DragCursor = crHandPoint
+        Picture.Data = {
+          0954506E67496D61676589504E470D0A1A0A0000000D49484452000000280000
+          002808060000008CFEB86D00000006624B474400FF00FF00FFA0BDA793000001
+          2F4944415478DAEDD73D0AC2301407F006571171761375D103B8B8EBA6628FE1
+          091CA447F0162A8A931EC0C103B808E2E6DEA1B3D47FB441ACAD059B346D790F
+          1E0F4AD3F723FD4A9891F260BA01042460D409AEEB0E504C644172EF3B72C118
+          DBC6053A28454513E400588A0B7415E15E0044EE8163C5C0552CA0EEC81610B7
+          B38B3247B60CF99F95A8E09F9D137282DB7EF802025741B922CBBA66CB0B1B59
+          03D2F6037B283BCD38117D00F77E207F5B97BA655E98E2ED262001B3045C6190
+          29A33B7AF13EBF7EA104242001FF010E51D629018ED06BE3073650CE46F81A31
+          2920DF6234D1EBF201F4065A28D3106412408EB3D067260EB080C17594B6F15E
+          B08AE75215505CF3B9601533170A0CB898D8D52901CADC7612302EF0863CCA00
+          223AC8AA6CA092C83F50771030F7C007E253D32947DD26AD0000000049454E44
+          AE426082}
+        Stretch = True
+        OnClick = pnImprimirClick
       end
     end
   end
@@ -345,5 +396,282 @@ object Empregado_Consulta: TEmpregado_Consulta
   object DSP: TDataSetProvider
     Left = 392
     Top = 271
+  end
+  object frxDBEmpregados: TfrxDBDataset
+    UserName = 'frxDBEmpregados'
+    CloseDataSource = False
+    DataSource = DS
+    BCDToCurrency = False
+    DataSetOptions = []
+    Left = 560
+    Top = 272
+  end
+  object frxRelEmpregados: TfrxReport
+    Version = '2022.2.8'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick, pbCopy, pbSelection]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 44760.293332430600000000
+    ReportOptions.LastChange = 44760.298021435180000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 632
+    Top = 264
+    Datasets = <
+      item
+        DataSet = frxDBEmpregados
+        DataSetName = 'frxDBEmpregados'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      Frame.Typ = []
+      MirrorMode = []
+      object PageHeader1: TfrxPageHeader
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 120.944960000000000000
+        Top = 18.897650000000000000
+        Width = 718.110700000000000000
+        object Memo1: TfrxMemoView
+          AllowVectorExport = True
+          Top = 37.795300000000000000
+          Width = 411.968770000000000000
+          Height = 37.795300000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -29
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Relat'#243'rio de Empregados')
+          ParentFont = False
+        end
+        object Memo2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 619.842920000000000000
+          Top = 3.779530000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[Date]')
+          ParentFont = False
+        end
+      end
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 22.677180000000000000
+        Top = 249.448980000000000000
+        Width = 718.110700000000000000
+        DataSet = frxDBEmpregados
+        DataSetName = 'frxDBEmpregados'
+        RowCount = 0
+        object frxDBEmpregadosid_empregado: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Top = 2.000000000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'id_empregado'
+          DataSet = frxDBEmpregados
+          DataSetName = 'frxDBEmpregados'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[frxDBEmpregados."id_empregado"]')
+          ParentFont = False
+        end
+        object frxDBEmpregadosnm_empregado: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 98.267780000000000000
+          Top = 2.000000000000000000
+          Width = 257.008040000000000000
+          Height = 18.897650000000000000
+          DataField = 'nm_empregado'
+          DataSet = frxDBEmpregados
+          DataSetName = 'frxDBEmpregados'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBEmpregados."nm_empregado"]')
+          ParentFont = False
+        end
+        object frxDBEmpregadosnm_departamento: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 362.834880000000000000
+          Top = 2.000000000000000000
+          Width = 351.496290000000000000
+          Height = 18.897650000000000000
+          DataField = 'nm_departamento'
+          DataSet = frxDBEmpregados
+          DataSetName = 'frxDBEmpregados'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBEmpregados."nm_departamento"]')
+          ParentFont = False
+        end
+      end
+      object ColumnHeader1: TfrxColumnHeader
+        FillType = ftGradient
+        Fill.EndColor = clSilver
+        Fill.GradientStyle = gsHorizontal
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 26.456710000000000000
+        Top = 162.519790000000000000
+        Width = 718.110700000000000000
+        object Memo3: TfrxMemoView
+          AllowVectorExport = True
+          Top = 3.779530000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'ID')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          AllowVectorExport = True
+          Left = 105.826840000000000000
+          Top = 3.779530000000000000
+          Width = 249.448980000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'NOME')
+          ParentFont = False
+        end
+        object Memo5: TfrxMemoView
+          AllowVectorExport = True
+          Left = 362.834880000000000000
+          Top = 3.779530000000000000
+          Width = 351.496290000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'DEPARTAMENTO')
+          ParentFont = False
+        end
+      end
+      object PageFooter1: TfrxPageFooter
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 34.015770000000000000
+        Top = 332.598640000000000000
+        Width = 718.110700000000000000
+        object Line1: TfrxLineView
+          AllowVectorExport = True
+          Width = 718.110700000000000000
+          Color = clBlack
+          Frame.Typ = [ftTop]
+        end
+        object Memo6: TfrxMemoView
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          Top = 7.559060000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Total de registros: ')
+          ParentFont = False
+        end
+        object Memo7: TfrxMemoView
+          AllowVectorExport = True
+          Left = 601.945270000000000000
+          Top = 7.559060000000000000
+          Width = 113.385900000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[COUNT(MasterData1)]')
+          ParentFont = False
+        end
+      end
+    end
   end
 end
