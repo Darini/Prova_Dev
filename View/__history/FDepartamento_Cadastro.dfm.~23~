@@ -1,0 +1,199 @@
+object Departamento_Cadastro: TDepartamento_Cadastro
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Departamento'
+  ClientHeight = 418
+  ClientWidth = 693
+  Color = clWhite
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 14
+  object lblID: TLabel
+    Left = 72
+    Top = 104
+    Width = 10
+    Height = 14
+    Caption = 'ID'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblNome: TLabel
+    Left = 72
+    Top = 160
+    Width = 31
+    Height = 14
+    Caption = 'NOME'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblLocal: TLabel
+    Left = 72
+    Top = 216
+    Width = 38
+    Height = 14
+    Caption = 'LOCAL'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblTitulo: TLabel
+    Left = 40
+    Top = 32
+    Width = 120
+    Height = 22
+    Caption = 'Departamento'
+    Color = clWhite
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -19
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object edtID: TEdit
+    Left = 72
+    Top = 124
+    Width = 105
+    Height = 24
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object edtNome: TEdit
+    Left = 72
+    Top = 180
+    Width = 481
+    Height = 24
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object edtLocal: TEdit
+    Left = 72
+    Top = 236
+    Width = 481
+    Height = 24
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+  end
+  object pnlBarraOpcoes: TPanel
+    Left = 0
+    Top = 328
+    Width = 693
+    Height = 90
+    Align = alBottom
+    Color = clMenuHighlight
+    ParentBackground = False
+    TabOrder = 3
+    object pnlCadastrar: TPanel
+      Left = 477
+      Top = 12
+      Width = 75
+      Height = 65
+      BevelOuter = bvNone
+      Caption = 'Cadastrar'
+      Color = clMenuHighlight
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentBackground = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      VerticalAlignment = taAlignBottom
+      object imgCadastrar: TImage
+        AlignWithMargins = True
+        Left = 18
+        Top = 4
+        Width = 40
+        Height = 40
+        Center = True
+        Picture.Data = {
+          0954506E67496D61676589504E470D0A1A0A0000000D49484452000000320000
+          003208060000001E3F88B100000006624B474400FF00FF00FFA0BDA793000000
+          E04944415478DAED9A310A02311045772A4114BC8957B0116C2D3D8DEB692CB7
+          156CBC82371114C12AFE94A61957A399CCFE07C3902D66E62DEC0642A4718294
+          1E802283110921CC9156A507533888C859136991B6A52755D841A4A588212862
+          0D8A5883229F70473C926723C4B83691C832591F33D5FDAF089ABDD447ED4011
+          8A50842214F946246E76DAC67643B36952FB8A34C9503B9BC805B146B1539FD7
+          A881DE0BA40E31A308452A1771F3B1BF450DBF5F8A508422147128D238397C70
+          751CF42B28620D8A588322D6189648BC30B0293DA9C25EBD30502B14B1861B91
+          2706783642556A49A90000000049454E44AE426082}
+        Stretch = True
+      end
+    end
+    object pnlLimpar: TPanel
+      Left = 396
+      Top = 12
+      Width = 75
+      Height = 65
+      BevelOuter = bvNone
+      Caption = 'Limpar'
+      Color = clMenuHighlight
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentBackground = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      VerticalAlignment = taAlignBottom
+      object imgLimpar: TImage
+        AlignWithMargins = True
+        Left = 18
+        Top = 4
+        Width = 40
+        Height = 40
+        Center = True
+        Picture.Data = {
+          0954506E67496D61676589504E470D0A1A0A0000000D49484452000000320000
+          003208060000001E3F88B100000006624B474400FF00FF00FFA0BDA793000000
+          E04944415478DAED9A310A02311045772A4114BC8957B0116C2D3D8DEB692CB7
+          156CBC82371114C12AFE94A61957A399CCFE07C3902D66E62DEC0642A4718294
+          1E802283110921CC9156A507533888C859136991B6A52755D841A4A588212862
+          0D8A5883229F70473C926723C4B83691C832591F33D5FDAF089ABDD447ED4011
+          8A50842214F946246E76DAC67643B36952FB8A34C9503B9BC805B146B1539FD7
+          A881DE0BA40E31A308452A1771F3B1BF450DBF5F8A508422147128D238397C70
+          751CF42B28620D8A588322D6189648BC30B0293DA9C25EBD30502B14B1861B91
+          2706783642556A49A90000000049454E44AE426082}
+        Stretch = True
+      end
+    end
+  end
+end

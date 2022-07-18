@@ -1,0 +1,24 @@
+unit DepartamentoDAO;
+
+interface
+
+uses IDDAO;
+
+
+type
+
+  TDepartamentoDAO = class(TIDDAO)
+
+  private
+
+  public
+    Constructor Create; overload;
+
+  end;
+
+implementation
+
+{TDepartamentoDAO}
+
+
+end.

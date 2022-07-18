@@ -1,0 +1,41 @@
+unit Menu_Form;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Departamento_Cadastro;
+
+type
+  TMenu = class(TForm)
+
+    mmMenuPrincipal: TMainMenu;
+    Relatrios1: TMenuItem;
+    Empregados2: TMenuItem;
+    Departamentos1: TMenuItem;
+    Cadastro1: TMenuItem;
+    miDepartamento_Cadastro: TMenuItem;
+    Empregados1: TMenuItem;
+
+    procedure miDepartamento_CadastroClick(Sender: TObject);
+  private
+    { Private declarations }
+
+  public
+    { Public declarations }
+  end;
+
+var
+  Menu: TMenu;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.miDepartamento_CadastroClick(Sender: TObject);
+begin
+    if FDepartamento_Cadastro. then
+
+end;
+
+end.

@@ -1,0 +1,19 @@
+unit DepartamentoDAO;
+
+interface
+
+uses
+  Util.IDDAO;
+
+type
+
+  TDepartamentoDAO = class(TIDDAO)
+
+  end;
+
+implementation
+
+{TDepartamentoDAO}
+
+
+end.

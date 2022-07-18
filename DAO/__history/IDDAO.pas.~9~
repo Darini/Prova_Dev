@@ -1,0 +1,23 @@
+unit IDDAO;
+
+interface
+
+type
+
+  TIDDAO = class
+
+  private
+
+  function GerarID(nomeTabela : string):Integer;
+
+  public
+
+  Constructor Create;overload;
+
+  end;
+
+implementation
+
+{TIDDAO}
+
+end.

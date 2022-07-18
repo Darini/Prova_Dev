@@ -1,0 +1,23 @@
+object DM_Conexao: TDM_Conexao
+  OldCreateOrder = False
+  Height = 254
+  Width = 592
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'Database=prova_dev'
+      'Password=postgres'
+      'Server=localhost'
+      'User_Name=postgres'
+      'ApplicationName='
+      'Port=5433'
+      'DriverID=PG')
+    LoginPrompt = False
+    Left = 192
+    Top = 104
+  end
+  object FDPhysPgDriverLink: TFDPhysPgDriverLink
+    VendorHome = '\'
+    Left = 352
+    Top = 128
+  end
+end

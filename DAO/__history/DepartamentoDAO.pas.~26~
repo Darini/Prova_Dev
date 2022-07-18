@@ -1,0 +1,17 @@
+unit DepartamentoDAO;
+
+interface
+
+
+type
+
+  TDepartamentoDAO = class(TIDDAO)
+
+  end;
+
+implementation
+
+{TDepartamentoDAO}
+
+
+end.

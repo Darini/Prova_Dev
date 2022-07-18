@@ -1,0 +1,35 @@
+unit UDepartamentoDAO;
+
+interface
+
+uses UIDDAO;
+
+type
+
+  TDepartamentoDAO = class(TIDDAO)
+
+  private
+
+    function TDepartamentoDAO.GerarID(nomeTabela : string):Integer;overload;
+
+  public
+    Constructor Create; overload;
+
+  end;
+
+var
+  DepartamentoDAO : TDepartamentoDAO;
+implementation
+
+{ TDepartamentoDAO }
+
+constructor TDepartamentoDAO.Create;
+begin
+  inherited;
+
+  Self.GerarID('Teste');
+
+end;
+
+
+end.

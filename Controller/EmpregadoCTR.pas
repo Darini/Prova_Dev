@@ -5,6 +5,8 @@ interface
 type
   TEmpregadoCTR = class
 
+  end;
+
 implementation
 
 end.

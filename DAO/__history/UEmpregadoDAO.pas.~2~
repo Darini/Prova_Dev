@@ -1,0 +1,13 @@
+unit UEmpregadoDAO;
+
+interface
+
+type
+
+  TEmpregadoDAO = class
+
+  end;
+
+implementation
+
+end.

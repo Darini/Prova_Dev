@@ -2,15 +2,27 @@ program ProvaDev;
 
 uses
   Vcl.Forms,
-  Menu_Form in 'Menu_Form.pas' {Form1},
   Empregado in 'Model\Empregado.pas',
-  Departamento in 'Model\Departamento.pas';
+  Departamento in 'Model\Departamento.pas',
+  UDepartamentoDAO in 'DAO\UDepartamentoDAO.pas',
+  UEmpregadoDAO in 'DAO\UEmpregadoDAO.pas',
+  DepartamentoCTR in 'Controller\DepartamentoCTR.pas',
+  EmpregadoCTR in 'Controller\EmpregadoCTR.pas',
+  UIDDAO in 'DAO\UIDDAO.pas',
+  FDepartamento_Cadastro in 'View\FDepartamento_Cadastro.pas' {Departamento_Cadastro},
+  DM_Conexao in 'Util\DM_Conexao.pas' {DM_Conexao: TDataModule},
+  FMenu in 'FMenu.pas' {Menu},
+  FEmpregado_Cadastro in 'View\FEmpregado_Cadastro.pas' {Empregado_Cadastro},
+  FDepartamento_Consulta in 'View\FDepartamento_Consulta.pas' {Departamento_Consulta};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TMenu, Menu);
+  Application.CreateForm(TEmpregado_Cadastro, Empregado_Cadastro);
+  Application.CreateForm(TDepartamento_Consulta, Departamento_Consulta);
+  //Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.

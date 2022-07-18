@@ -1,0 +1,41 @@
+unit FDepartamento_Cadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Imaging.pngimage;
+
+type
+  TDepartamento_Cadastro = class(TForm)
+    lblID: TLabel;
+    edtID: TEdit;
+    edtNome: TEdit;
+    lblNome: TLabel;
+    edtLocal: TEdit;
+    lblLocal: TLabel;
+    lblTitulo: TLabel;
+    pnlBarraOpcoes: TPanel;
+    pnlCadastrar: TPanel;
+    imgCadastrar: TImage;
+    Panel3: TPanel;
+    imgLimpar: TImage;
+    Panel1: TPanel;
+    Image1: TImage;
+    Panel2: TPanel;
+    Image2: TImage;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Departamento_Cadastro: TDepartamento_Cadastro;
+
+implementation
+
+{$R *.dfm}
+
+end.

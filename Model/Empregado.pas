@@ -19,6 +19,7 @@ type
     fdata_admissao : TDateTime;
     fsalario : double;
     fcomissao : double;
+
     function GetIdEmpregado: Integer;
     procedure SetIdEmpregado(const Value: Integer);
     function GetDepartamento: TDepartamento;
@@ -54,6 +55,11 @@ type
 implementation
 
 { TEmpregado }
+
+constructor TEmpregado.Create;
+begin
+
+end;
 
 function TEmpregado.GetComissao: double;
 begin

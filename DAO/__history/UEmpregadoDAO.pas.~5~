@@ -1,0 +1,20 @@
+unit UEmpregadoDAO;
+
+interface
+
+uses
+  IDDAO;
+
+type
+
+  TEmpregadoDAO = class(TIDDAO)
+
+  private
+
+  public
+
+  end;
+
+implementation
+
+end.

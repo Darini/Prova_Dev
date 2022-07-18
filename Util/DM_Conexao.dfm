@@ -1,0 +1,52 @@
+object DM_Conexao: TDM_Conexao
+  OldCreateOrder = False
+  Height = 254
+  Width = 592
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'Database=prova_dev'
+      'Password=postgres'
+      'Server=localhost'
+      'User_Name=postgres'
+      'ApplicationName='
+      'Port=5433'
+      'DriverID=PG')
+    Connected = True
+    LoginPrompt = False
+    Left = 192
+    Top = 104
+  end
+  object FDPhysPgDriverLink: TFDPhysPgDriverLink
+    VendorHome = 'C:\Delphi\Prova_Dev\Win32\Debug'
+    VendorLib = 'libpq.dll'
+    Left = 288
+    Top = 104
+  end
+  object FDQuery: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      'SELECT '
+      ' D.id_departamento,'
+      ' D.nm_departamento,'
+      ' D.local'
+      'FROM'
+      ' DEPARTAMENTOS D')
+    Left = 160
+    Top = 158
+    object FDQueryid_departamento: TIntegerField
+      FieldName = 'id_departamento'
+      Origin = 'id_departamento'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQuerynm_departamento: TWideStringField
+      FieldName = 'nm_departamento'
+      Origin = 'nm_departamento'
+      Size = 100
+    end
+    object FDQuerylocal: TWideStringField
+      FieldName = 'local'
+      Origin = '"local"'
+      Size = 100
+    end
+  end
+end
