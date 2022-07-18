@@ -1,0 +1,58 @@
+object DM_Conexao: TDM_Conexao
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  Height = 254
+  Width = 592
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'Database=prova_dev'
+      'Password=postgres'
+      'Server=localhost'
+      'User_Name=postgres'
+      'ApplicationName='
+      'Port=5433'
+      'DriverID=PG')
+    Connected = True
+    LoginPrompt = False
+    Left = 208
+    Top = 96
+  end
+  object FDPhysPgDriverLink: TFDPhysPgDriverLink
+    VendorHome = 'C:\Delphi\Prova_Dev\Win32\Debug'
+    VendorLib = 'libpq.dll'
+    Left = 288
+    Top = 104
+  end
+  object FDQuery: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      'SELECT'
+      ' D.id_departamento,'
+      ' D.nm_departamento,'
+      ' D.local'
+      'FROM DEPARTAMENTOS AS D')
+    Left = 160
+    Top = 158
+    object FDQueryid_empregado: TIntegerField
+      FieldName = 'id_empregado'
+      Origin = 'id_empregado'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQuerynm_departamento: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'nm_departamento'
+      Origin = 'nm_departamento'
+      Size = 100
+    end
+    object FDQuerynm_empregado: TWideStringField
+      FieldName = 'nm_empregado'
+      Origin = 'nm_empregado'
+      Size = 100
+    end
+    object FDQuerynm_funcao: TWideStringField
+      FieldName = 'nm_funcao'
+      Origin = 'nm_funcao'
+      Size = 100
+    end
+  end
+end

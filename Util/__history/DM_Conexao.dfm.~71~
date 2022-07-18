@@ -1,0 +1,42 @@
+object DM_Conexao: TDM_Conexao
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  Height = 254
+  Width = 592
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'Database=prova_dev'
+      'Password=postgres'
+      'Server=localhost'
+      'User_Name=postgres'
+      'ApplicationName='
+      'Port=5433'
+      'DriverID=PG')
+    Connected = True
+    LoginPrompt = False
+    Left = 208
+    Top = 96
+  end
+  object FDPhysPgDriverLink: TFDPhysPgDriverLink
+    VendorHome = 'C:\Delphi\Prova_Dev\Win32\Debug'
+    VendorLib = 'libpq.dll'
+    Left = 288
+    Top = 104
+  end
+  object FDQuery: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      'SELECT'
+      ' E.id_empregado,'
+      ' D.nm_departamento,'
+      ' E2.nm_empregado,'
+      ' E.nm_funcao'
+      'FROM EMPREGADOS AS E'
+      'INNER JOIN DEPARTAMENTOS AS D'
+      'ON D.id_departamento = E.cod_departamento'
+      'INNER JOIN EMPREGADOS AS E2'
+      'ON E2.id_empregado = E.id_empregado')
+    Left = 160
+    Top = 158
+  end
+end

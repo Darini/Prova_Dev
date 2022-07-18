@@ -9,7 +9,7 @@ uses
   Vcl.StdCtrls, Vcl.Buttons, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, DM_Conexao;
+  FireDAC.Comp.Client, Departamento,UDepartamento_ConsultaDAO;
 
 type
   TDepartamento_Consulta = class(TForm)
@@ -20,29 +20,35 @@ type
     pnlBarraOpcoes: TPanel;
     pnlLimpar: TPanel;
     imgLimpar: TImage;
-    pnlCadastrar: TPanel;
-    imgCadastrar: TImage;
+    pnlSelecionar: TPanel;
+    imgSelecionar: TImage;
     lblTitulo: TLabel;
     edtNomeDepartamento: TEdit;
     lblNomeDepartamento: TLabel;
     pnlPesquisar: TPanel;
     imgConsulta: TImage;
-    FDQDepartamentos_Consulta: TFDQuery;
-    FDQDepartamentos_Consultaid_departamento: TIntegerField;
-    FDQDepartamentos_Consultanm_departamento: TWideStringField;
-    FDQDepartamentos_Consultalocal: TWideStringField;
     CDSid_departamento: TIntegerField;
     CDSnm_departamento: TWideStringField;
     CDSlocal: TWideStringField;
-    procedure FormShow(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure dbgDepartamentosDblClick(Sender: TObject);
+    procedure pnlSelecionarClick(Sender: TObject);
+    procedure pnlLimparClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
 
-    DM_Conexao : TDM_Conexao;
+    objDepartamento : TDepartamento;
+
+    Departamento_ConsultaDAO : TDepartamento_ConsultaDAO;
+    function GetDepartamento: TDepartamento;
+
+    procedure PreencheObjeto();
 
   public
     { Public declarations }
+
+    property departamento : TDepartamento read GetDepartamento;
   end;
 
 var
@@ -50,19 +56,63 @@ var
 
 implementation
 
+
 {$R *.dfm}
+
+
+procedure TDepartamento_Consulta.dbgDepartamentosDblClick(Sender: TObject);
+begin
+
+  DSP.DataSet := Departamento_ConsultaDAO.BuscaDepartamentos();
+  CDS.Open;
+
+  PreencheObjeto;
+
+  Close;
+end;
 
 procedure TDepartamento_Consulta.FormCreate(Sender: TObject);
 begin
-  if not Assigned(DM_Conexao) then
-    DM_Conexao := TDM_Conexao.Create(Self);
+  if not Assigned(Departamento_ConsultaDAO) then
+    Departamento_ConsultaDAO := TDepartamento_ConsultaDAO.Create(Self);
+
+  if not Assigned(objDepartamento) then
+    objDepartamento := TDepartamento.Create;
 
 end;
 
 procedure TDepartamento_Consulta.FormShow(Sender: TObject);
 begin
-  DSP.DataSet := DM_Conexao.FDQuery;
+  DSP.DataSet := Departamento_ConsultaDAO.BuscaDepartamentos();
   CDS.Open;
+
+  Departamento_ConsultaDAO.FDConnection.Close;
+
+end;
+
+function TDepartamento_Consulta.GetDepartamento: TDepartamento;
+begin
+  Result := objDepartamento;
+end;
+
+
+procedure TDepartamento_Consulta.pnlLimparClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TDepartamento_Consulta.pnlSelecionarClick(Sender: TObject);
+begin
+
+  PreencheObjeto;
+
+  Close;
+end;
+
+procedure TDepartamento_Consulta.PreencheObjeto;
+begin
+  objDepartamento.id_departamento := CDSid_departamento.AsInteger;
+  objDepartamento.nm_departamento := CDSnm_departamento.AsString;
 end;
 
 end.

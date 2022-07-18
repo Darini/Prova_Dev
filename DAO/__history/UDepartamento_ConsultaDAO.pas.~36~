@@ -1,0 +1,47 @@
+unit UDepartamento_ConsultaDAO;
+
+interface
+
+uses DM_Conexao,FireDAC.Comp.Client;
+
+type
+  TDepartamento_ConsultaDAO = class(TDM_Conexao)
+
+            89N3PDyZzakoH7W6n8ZrjGDDktjh8iWFG6eKRvi3kvpQ
+
+  private
+
+  public
+
+    Constructor Create;overload;
+
+
+
+  end;
+
+var
+  Departamento_ConsultaDAO : TDepartamento_ConsultaDAO;
+
+implementation
+
+{ TDepartamento_ConsultaDAO }
+
+function TDepartamento_ConsultaDAO.BuscaDepartamentos: TFDQuery;
+begin
+  FDQuery.SQL.Clear;
+  FDQuery.SQL.Add('SELECT');
+  FDQuery.SQL.Add(' D.id_departamento,');
+  FDQuery.SQL.Add(' D.nm_departamento,');
+  FDQuery.SQL.Add(' D.local');
+  FDQuery.SQL.Add('FROM DEPARTAMENTOS AS D');
+
+
+  Result := FDQuery;
+end;
+
+constructor TDepartamento_ConsultaDAO.Create;
+begin
+  inherited;
+end;
+
+end.

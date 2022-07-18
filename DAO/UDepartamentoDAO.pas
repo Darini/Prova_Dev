@@ -9,8 +9,6 @@ type
   TDepartamentoDAO = class(TIDDAO)
   private
 
-
-
   public
     Constructor Create; overload;
 

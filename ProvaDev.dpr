@@ -13,7 +13,12 @@ uses
   DM_Conexao in 'Util\DM_Conexao.pas' {DM_Conexao: TDataModule},
   FMenu in 'FMenu.pas' {Menu},
   FEmpregado_Cadastro in 'View\FEmpregado_Cadastro.pas' {Empregado_Cadastro},
-  FDepartamento_Consulta in 'View\FDepartamento_Consulta.pas' {Departamento_Consulta};
+  FDepartamento_Consulta in 'View\FDepartamento_Consulta.pas' {Departamento_Consulta},
+  UDepartamento_ConsultaDAO in 'DAO\UDepartamento_ConsultaDAO.pas',
+  UEmpregado_ConsultaDAO in 'DAO\UEmpregado_ConsultaDAO.pas',
+  FEmpregado_Consulta in 'View\FEmpregado_Consulta.pas' {Empregado_Consulta};
+
+{Departamento_ConsultaDAO}
 
 {$R *.res}
 
@@ -21,8 +26,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TMenu, Menu);
-  Application.CreateForm(TEmpregado_Cadastro, Empregado_Cadastro);
-  Application.CreateForm(TDepartamento_Consulta, Departamento_Consulta);
-  //Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.

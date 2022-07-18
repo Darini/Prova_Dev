@@ -171,9 +171,10 @@ object Empregado_Cadastro: TEmpregado_Cadastro
     Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
+    ReadOnly = True
     TabOrder = 0
   end
-  object edtNome: TEdit
+  object edtNomeDepartamento: TEdit
     Left = 223
     Top = 180
     Width = 481
@@ -184,7 +185,8 @@ object Empregado_Cadastro: TEmpregado_Cadastro
     Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
-    TabOrder = 1
+    ReadOnly = True
+    TabOrder = 2
   end
   object edtNomeEmpregado: TEdit
     Left = 72
@@ -197,7 +199,7 @@ object Empregado_Cadastro: TEmpregado_Cadastro
     Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 5
   end
   object pnlBarraOpcoes: TPanel
     Left = 0
@@ -207,7 +209,7 @@ object Empregado_Cadastro: TEmpregado_Cadastro
     Align = alBottom
     Color = clMenuHighlight
     ParentBackground = False
-    TabOrder = 3
+    TabOrder = 10
     DesignSize = (
       865
       90)
@@ -232,6 +234,7 @@ object Empregado_Cadastro: TEmpregado_Cadastro
       ShowHint = True
       TabOrder = 0
       VerticalAlignment = taAlignBottom
+      OnClick = pnlCadastrarClick
       object imgCadastrar: TImage
         AlignWithMargins = True
         Left = 18
@@ -251,6 +254,7 @@ object Empregado_Cadastro: TEmpregado_Cadastro
           751CF42B28620D8A588322D6189648BC30B0293DA9C25EBD30502B14B1861B91
           2706783642556A49A90000000049454E44AE426082}
         Stretch = True
+        OnClick = pnlCadastrarClick
       end
     end
     object pnlLimpar: TPanel
@@ -440,7 +444,8 @@ object Empregado_Cadastro: TEmpregado_Cadastro
     Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
-    TabOrder = 4
+    ReadOnly = True
+    TabOrder = 1
   end
   object edtIdEmpregadoFuncao: TEdit
     Left = 72
@@ -453,7 +458,8 @@ object Empregado_Cadastro: TEmpregado_Cadastro
     Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
-    TabOrder = 5
+    ReadOnly = True
+    TabOrder = 3
   end
   object edtNomeEmpregadoFuncao: TEdit
     Left = 223
@@ -466,7 +472,8 @@ object Empregado_Cadastro: TEmpregado_Cadastro
     Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
-    TabOrder = 6
+    ReadOnly = True
+    TabOrder = 4
   end
   object edtNomeFuncao: TEdit
     Left = 72
@@ -479,10 +486,10 @@ object Empregado_Cadastro: TEmpregado_Cadastro
     Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
-    TabOrder = 7
+    TabOrder = 6
   end
   object edtSalario: TEdit
-    Left = 294
+    Left = 295
     Top = 401
     Width = 113
     Height = 24
@@ -514,9 +521,9 @@ object Empregado_Cadastro: TEmpregado_Cadastro
     Height = 24
     Date = 44759.000000000000000000
     Time = 0.975895115741877800
-    TabOrder = 10
+    TabOrder = 7
   end
-  object pnlPesquisar: TPanel
+  object pnlPesquisarDepartamentos: TPanel
     Left = 720
     Top = 168
     Width = 45
@@ -526,7 +533,7 @@ object Empregado_Cadastro: TEmpregado_Cadastro
     DragCursor = crHandPoint
     ParentBackground = False
     TabOrder = 11
-    OnClick = pnlPesquisarClick
+    OnClick = pnlPesquisarDepartamentosClick
     DesignSize = (
       45
       36)
@@ -557,10 +564,10 @@ object Empregado_Cadastro: TEmpregado_Cadastro
         5CA0F155C7B55D26F2487699C8A583B2461F51F696A84796DEC8C526F248F7D5
         D5E4916FE8DDE435F99270BC7032D55288A76BF609A3E57191CAF1BE7D3BFD05
         1376BC1FE37AA5D60000000049454E44AE426082}
-      OnClick = pnlPesquisarClick
+      OnClick = pnlPesquisarDepartamentosClick
     end
   end
-  object Panel1: TPanel
+  object pnlPesquisarEmpregados: TPanel
     Left = 720
     Top = 222
     Width = 45
@@ -570,7 +577,7 @@ object Empregado_Cadastro: TEmpregado_Cadastro
     DragCursor = crHandPoint
     ParentBackground = False
     TabOrder = 12
-    OnClick = pnlPesquisarClick
+    OnClick = pnlPesquisarEmpregadosClick
     DesignSize = (
       45
       36)
@@ -601,7 +608,7 @@ object Empregado_Cadastro: TEmpregado_Cadastro
         5CA0F155C7B55D26F2487699C8A583B2461F51F696A84796DEC8C526F248F7D5
         D5E4916FE8DDE435F99270BC7032D55288A76BF609A3E57191CAF1BE7D3BFD05
         1376BC1FE37AA5D60000000049454E44AE426082}
-      OnClick = pnlPesquisarClick
+      OnClick = pnlPesquisarEmpregadosClick
     end
   end
 end
